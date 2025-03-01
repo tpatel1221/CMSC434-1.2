@@ -43,6 +43,29 @@
     padding: 10px 20px;
     margin: 0px;
 }
+.center {
+    text-align:center 
+}
+.profile_name {
+    text-align: center;
+    font-size: 25px;
+    font-weight:bold;
+    margin:0;
+}
 
-  
-  
+.popup{
+    color: black;
+    background-color: grey;
+    position: relative; 
+    width:auto;
+    height:100px
+}
+
+.removebutton{
+    position: absolute; 
+    cursor:pointer;
+    top:10px;
+    right:10px;
+    width:15px;
+    height:15px;
+}
