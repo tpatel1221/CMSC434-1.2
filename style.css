@@ -69,3 +69,61 @@
     width:15px;
     height:15px;
 }
+
+.container{
+    width: 550px;
+    margin: 5px;
+}
+
+.taskinput{
+    padding: 10px;
+    width: 80%;
+    margin: 5px;
+}
+
+.addbutton{
+    padding: 10px;
+    color: gray;
+    border: solid;
+    cursor: pointer;
+}
+
+.addbutton:hover {
+    background: lightgrey;
+}
+
+.taskitem{
+    background: lightgrey;
+    padding: 10px 10px 10px 30px;
+    cursor: pointer;
+    display:flex;
+    position: relative;
+}
+
+.taskitem.checked{
+    text-decoration: line-through;
+    background:darkgrey;
+}
+
+.taskitem.checked::before {
+    content: "✔"; 
+    position: absolute;
+    left: 10px;
+    font-size: 10px;
+}
+
+.closebutton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 11.25px 11px;
+    border: none;
+}
+
+.closebutton:hover {
+    background-color: red;
+    color: white;
+}
+  
+
+

@@ -13,8 +13,8 @@
         <h1>To Do</h1>
         
         <div class="container">
-            <input type="text" id="taskInput" placeholder="New task...">
-            <button onclick="addTask()">Add</button>
+            <input type="text" id="taskInput" class="taskinput" placeholder="New entry...">
+            <button class="addbutton" onclick="addTask()">Add</button>
             <ul id="taskList"></ul>
         </div>
     </div>
@@ -28,25 +28,26 @@
                 return;
             }
 
-            const list_item = document.createElement("list_item");
-            list_item.textContent = taskText;
+            const listItem = document.createElement("li");
+            listItem.className = "taskitem";
+            listItem.textContent = taskText;
 
             const closeButton = document.createElement("button");
             closeButton.textContent = "X";
-            closeButton.className = "close";
+            closeButton.className = "closebutton";
             closeButton.onclick = function() {
-                list_item.remove();
+                listItem.remove();
             };
 
-            list_item.onclick = function() {
-                list_item.classList.toggle("checked");
+            listItem.onclick = function() {
+                listItem.classList.toggle("checked");
             };
 
-            list_item.appendChild(closeButton);
-            document.getElementById("taskList").appendChild(list_item);
+            listItem.appendChild(closeButton);
+            document.getElementById("taskList").appendChild(listItem);
             input.value = "";
         }
     </script>
-    
+
 </body>
 </html>
