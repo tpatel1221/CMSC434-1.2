@@ -34,24 +34,29 @@
             <button id="print">Print based on above choices</button>
         </div>
         <p id="output"></p>
-    </div>
 
-    <script>
-        document.getElementById("print").addEventListener("click", function () {
-            let selectedType1 = document.querySelector('input[name="type1"]:checked');
-            let selectedType2 = document.getElementById("type2").value;
-
-            document.getElementById("output").textContent = 
-            `You selected ${selectedType1.value} for Type #1 and ${selectedType2} for Type #2.`;
-        });
-    </script>
+        <script>
+            document.getElementById("print").addEventListener("click", function () {
+                let selectedType1 = document.querySelector('input[name="type1"]:checked');
+                let selectedType2 = document.getElementById("type2").value;
+    
+                document.getElementById("output").textContent = 
+                `You selected ${selectedType1.value} for Type #1 and ${selectedType2} for Type #2.`;
+            });
+        </script>
+    
+    <script src="script.js"></script>
 
     <footer>
-        <button onclick="navigateTo('tab1.html')">Tab 1</button>
-        <button onclick="navigateTo('tab2.html')">Tab 2</button>
-        <button onclick="navigateTo('tab3.html')">Tab 3</button>
-        <button onclick="navigateTo('tab4.html')">Tab 4</button>
+        <button id = "Text" onclick="navigateTo('tab1.html')">Tab 1</button>
+        <button id = "LR" onclick="navigateTo('tab2.html')">Tab 2</button>
+        <button id = "Colors" onclick="navigateTo('tab3.html')">Tab 3</button>
+        <button id = "Profile" onclick="navigateTo('tab4.html')">Tab 4</button>
+        <button id = "Choices" onclick="navigateTo('tab5.html')">Tab 5</button>
+        <button id = "To-Do"onclick="navigateTo('tab6.html')">Tab 6</button>
     </footer>
+
+    </div>
     
 </body>
 </html>
