@@ -11,12 +11,12 @@
 <body>
     <div class="device">
         <h1> Choices </h1>
-    
+
         <p>Type #1:</p>
         <form>
-            <label><input type = "radio" name = "type1" value = "option 1"> Option 1</label><br>
-            <label><input type = "radio" name = "type1" value = "option 2"> Option 2</label><br>
-            <label><input type = "radio" name = "type1" value = "option 3"> Option 3</label><br>
+            <label><input type="radio" name="type1" value="option 1"> Option 1</label><br>
+            <label><input type="radio" name="type1" value="option 2"> Option 2</label><br>
+            <label><input type="radio" name="type1" value="option 3"> Option 3</label><br>
         </form>
         <br>
 
@@ -30,7 +30,7 @@
         </form>
         <br>
 
-        <div class = "center">
+        <div class="center">
             <button id="print">Print based on above choices</button>
         </div>
         <p id="output"></p>
@@ -39,24 +39,49 @@
             document.getElementById("print").addEventListener("click", function () {
                 let selectedType1 = document.querySelector('input[name="type1"]:checked');
                 let selectedType2 = document.getElementById("type2").value;
-    
-                document.getElementById("output").textContent = 
-                `You selected ${selectedType1.value} for Type #1 and ${selectedType2} for Type #2.`;
+
+                document.getElementById("output").textContent =
+                    `You selected ${selectedType1.value} for Type #1 and ${selectedType2} for Type #2.`;
             });
         </script>
-    
-    <script src="script.js"></script>
 
-    <footer>
-        <button id = "Text" onclick="navigateTo('tab1.html')">Tab 1</button>
-        <button id = "LR" onclick="navigateTo('tab2.html')">Tab 2</button>
-        <button id = "Colors" onclick="navigateTo('tab3.html')">Tab 3</button>
-        <button id = "Profile" onclick="navigateTo('tab4.html')">Tab 4</button>
-        <button id = "Choices" onclick="navigateTo('tab5.html')">Tab 5</button>
-        <button id = "To-Do"onclick="navigateTo('tab6.html')">Tab 6</button>
-    </footer>
+        <script src="script.js"></script>
+
+        <footer>
+            <button id="Text" onclick="navigateTo('tab1.html')">
+                <img src="text-format.png" alt="Paper with folded corner and capital T" class=icon>
+                <br><!-- From Pixel Perfect-->
+                Text
+            </button>
+
+            <button id="LR" onclick="navigateTo('tab2.html')">
+                <img src="right-drawn-arrow.png" alt="Arrow to Lower Right" class=icon>
+                <br><!--From FreePik-->
+                LR
+            </button>
+            <button id="Colors" onclick="navigateTo('tab3.html')">
+                <img src="art.png" alt="Paint Palette and Brush" class=icon>
+                <br><!--From Nawicon-->
+                Colors</button>
+            <button id="Profile" onclick="navigateTo('tab4.html')">
+                <img src="profile.png" alt="Paint Palette and Brush" class=icon>
+                <br><!--From RawPixel-->
+                Profile
+            </button>
+            <button id="Choices" onclick="navigateTo('tab5.html')"><img src="choice.png" alt="Paint Palette and Brush"
+                    class=icon>
+                <br><!--From FlatIcon-->
+                Choices</button>
+
+            <button id="To-Do" onclick="navigateTo('tab6.html')"><img src="todo.png" alt="Paint Palette and Brush"
+                    class=icon>
+                <br><!--From FlatIcon-->
+                To-Do</button>
+
+        </footer>
 
     </div>
-    
+
 </body>
+
 </html>
