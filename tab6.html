@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSC434-1.2</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="device">
+        <h1>To Do</h1>
+        
+        <div class="container">
+            <input type="text" id="taskInput" class="taskinput" placeholder="New entry...">
+            <button class="addbutton" onclick="addTask()">Add</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById("taskInput");
+            const taskText = input.value.trim();
+            if (taskText === "") {
+                alert("Entry is empty!");
+                return;
+            }
+
+            const listItem = document.createElement("li");
+            listItem.className = "taskitem";
+            listItem.textContent = taskText;
+
+            const closeButton = document.createElement("button");
+            closeButton.textContent = "X";
+            closeButton.className = "closebutton";
+            closeButton.onclick = function() {
+                listItem.remove();
+            };
+
+            listItem.onclick = function() {
+                listItem.classList.toggle("checked");
+            };
+
+            listItem.appendChild(closeButton);
+            document.getElementById("taskList").appendChild(listItem);
+            input.value = "";
+        }
+    </script>
+
+    <footer>
+        <button onclick="navigateTo('tab1.html')">Tab 1</button>
+        <button onclick="navigateTo('tab2.html')">Tab 2</button>
+        <button onclick="navigateTo('tab3.html')">Tab 3</button>
+        <button onclick="navigateTo('tab4.html')">Tab 4</button>
+    </footer>
+
+</body>
+</html>

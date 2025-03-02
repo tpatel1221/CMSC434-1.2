@@ -43,6 +43,87 @@
     padding: 10px 20px;
     margin: 0px;
 }
+.center {
+    text-align:center 
+}
+.profile_name {
+    text-align: center;
+    font-size: 25px;
+    font-weight:bold;
+    margin:0;
+}
 
+.popup{
+    color: black;
+    background-color: grey;
+    position: relative; 
+    width:auto;
+    height:100px
+}
+
+.removebutton{
+    position: absolute; 
+    cursor:pointer;
+    top:10px;
+    right:10px;
+    width:15px;
+    height:15px;
+}
+
+.container{
+    width: 550px;
+    margin: 5px;
+}
+
+.taskinput{
+    padding: 10px;
+    width: 80%;
+    margin: 5px;
+}
+
+.addbutton{
+    padding: 10px;
+    color: gray;
+    border: solid;
+    cursor: pointer;
+}
+
+.addbutton:hover {
+    background: lightgrey;
+}
+
+.taskitem{
+    background: lightgrey;
+    padding: 10px 10px 10px 30px;
+    cursor: pointer;
+    display:flex;
+    position: relative;
+}
+
+.taskitem.checked{
+    text-decoration: line-through;
+    background:darkgrey;
+}
+
+.taskitem.checked::before {
+    content: "✔"; 
+    position: absolute;
+    left: 10px;
+    font-size: 10px;
+}
+
+.closebutton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 11.25px 11px;
+    border: none;
+}
+
+.closebutton:hover {
+    background-color: red;
+    color: white;
+}
   
-  
+
+
