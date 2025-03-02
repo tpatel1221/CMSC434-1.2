@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSC434-1.2</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="device">
+        <h1> Choices </h1>
+    
+        <p>Type #1:</p>
+        <form>
+            <label><input type = "radio" name = "type1" value = "option 1"> Option 1</label><br>
+            <label><input type = "radio" name = "type1" value = "option 2"> Option 2</label><br>
+            <label><input type = "radio" name = "type1" value = "option 3"> Option 3</label><br>
+        </form>
+        <br>
+
+        <p>Type #2:</p>
+        <form>
+            <select name="type2" id="type2">
+                <option value="option 1">Option 1</option>
+                <option value="option 2">Option 2</option>
+                <option value="option 3">Option 3</option>
+            </select>
+        </form>
+        <br>
+
+        <div class = "center">
+            <button id="print">Print based on above choices</button>
+        </div>
+        <p id="output"></p>
+
+    </div>
+
+
+    <script>
+        document.getElementById("print").addEventListener("click", function () {
+            let selectedType1 = document.querySelector('input[name="type1"]:checked');
+            let selectedType2 = document.getElementById("type2").value;
+
+            document.getElementById("output").textContent = 
+                `You selected ${selectedType1.value} for Type #1 and ${selectedType2} for Type #2.`;
+        });
+    </script>
+
+</body>
