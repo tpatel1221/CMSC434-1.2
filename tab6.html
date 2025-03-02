@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSC434-1.2</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="device">
+        <h1>To Do</h1>
+        
+        <div class="container">
+            <input type="text" id="taskInput" placeholder="New task...">
+            <button onclick="addTask()">Add</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById("taskInput");
+            const taskText = input.value.trim();
+            if (taskText === "") {
+                alert("Entry is empty!");
+                return;
+            }
+
+            const list_item = document.createElement("list_item");
+            list_item.textContent = taskText;
+
+            const closeButton = document.createElement("button");
+            closeButton.textContent = "X";
+            closeButton.className = "close";
+            closeButton.onclick = function() {
+                list_item.remove();
+            };
+
+            list_item.onclick = function() {
+                list_item.classList.toggle("checked");
+            };
+
+            list_item.appendChild(closeButton);
+            document.getElementById("taskList").appendChild(list_item);
+            input.value = "";
+        }
+    </script>
+    
+</body>
+</html>
